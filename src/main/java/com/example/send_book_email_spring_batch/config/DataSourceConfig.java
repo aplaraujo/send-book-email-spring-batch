@@ -26,7 +26,7 @@ public class DataSourceConfig {
     }
 
     @Bean
-    public PlatformTransactionManager transactionManager(@Qualifier("appDS") DataSource dataSource) {
+    public PlatformTransactionManager transactionManagerApp(@Qualifier("appDS") DataSource dataSource) {
         return new DataSourceTransactionManager(dataSource);
     }
 }
